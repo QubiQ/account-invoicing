@@ -1,4 +1,4 @@
-# -*- encoding: utf-8 -*-
+# -*- coding: utf-8 -*-
 # #############################################################################
 #
 #    OpenERP, Open Source Management Solution
@@ -41,6 +41,6 @@ class AccountInvoice(models.Model):
                 invoice.customer_ref_strip = invoice.name.lower()
     _sql_constraints = [
         ('unique_customer_ref_strip', 'UNIQUE('
-         'customer_ref_strip, company_id, partner_id)',
+         'customer_ref_strip, company_id, commercial_partner_id)',
          _('The customer reference must be unique for '
            'each customer !'))]
